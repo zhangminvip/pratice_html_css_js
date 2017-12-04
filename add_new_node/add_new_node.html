@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add new node</title>
+</head>
+<body>
+
+	<div id = "div1">
+		
+		<p id = "p1">这是一个段落</p>
+
+		<p id = "p2">这是另一个段落</p>
+
+
+	</div>
+
+
+
+	<script type="text/javascript">
+
+		// this section of the code create a new elemenmt 'p'
+		
+		var para = document.createElement("p")
+
+		// if you need to add text to the <p> element, you must first create a text node, this code creates a text node.
+
+		var node = document.createTextNode("这是一个新段落")
+
+		//  then you have to add the text node to the <p> element
+
+		para.appendChild(node)
+
+		// finally, you have to add this new element to an existing element,this section of code finds an existing element.
+
+		var element = document.getElementById("div1")
+
+
+		// this section of code adds new elements to the existing element
+
+		element.appendChild(para)
+
+
+		// now,i want to delete a element.
+
+		var child_del = document.getElementById("p2")
+
+		// element.removeChild(child_del)  
+
+		// Of course, there is another way to delete elements
+
+		child_del.parentNode.removeChild(child_del)
+
+
+
+
+	</script>
+
+
+
+</body>
+</html>
